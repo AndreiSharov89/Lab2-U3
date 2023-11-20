@@ -14,7 +14,7 @@ namespace Enum
         {
             public int foot;
             public int inch;
-            public int sumInches;
+            //public int sumInches;
         }
 
         static void Main(string[] args)
@@ -26,17 +26,17 @@ namespace Enum
             firstDist.foot = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter first inches: ");
             firstDist.inch = int.Parse(Console.ReadLine());
-            firstDist.sumInches = firstDist.foot * 12 + firstDist.inch;
+            //firstDist.sumInches = firstDist.foot * 12 + firstDist.inch;
 
             Console.WriteLine("Enter second foots: ");
             secondDist.foot = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter second inches: ");
             secondDist.inch = int.Parse(Console.ReadLine());
-            secondDist.sumInches = secondDist.foot * 12 + secondDist.inch;
+            //secondDist.sumInches = secondDist.foot * 12 + secondDist.inch;
 
-            sumDist.sumInches = firstDist.sumInches + secondDist.sumInches;
-            sumDist.foot = (int)(sumDist.sumInches / 12);
-            sumDist.inch = (sumDist.sumInches % 12);
+            //sumDist.sumInches = firstDist.sumInches + secondDist.sumInches;
+            sumDist.foot = firstDist.foot + secondDist.foot + (int)((firstDist.inch + secondDist.inch)/12);
+            sumDist.inch = ((firstDist.inch + secondDist.inch) % 12);
             //Console.WriteLine($"First in inches: {firstDist.sumInches}");
             //Console.WriteLine($"Second in inches: {secondDist.sumInches}");
             Console.WriteLine($"Summa: {sumDist.foot}'- {sumDist.inch}\"");
